@@ -44,7 +44,7 @@ int main (int argc, char *argv[])
   for (int i = 1; i < taps; i++)
   {
     fcomplex sample = fir.processNextSample(fcomplex(0,0));
-    cerr  << sample.real() << endl;
+    cout  << sample.real() << endl;
   }
   
 
@@ -58,7 +58,7 @@ int main (int argc, char *argv[])
 /*
   for(int i=0; i< nrSamplesPerIntegration * channels; i++) {
     in[i] = fcomplex(i,0.0f);
-    cerr << "i = " << in[i] << endl;
+    cout << "i = " << in[i] << endl;
   }
 */
   boost::multi_array<fcomplex, 2> out(boost::extents[channels][nrSamplesPerIntegration]);
@@ -67,14 +67,14 @@ int main (int argc, char *argv[])
 
   ppf.filter(in, out);
   for(int i=0; i< nrSamplesPerIntegration; i++) {
-    cerr << "out = " << out[0][i] << endl;
+    cout << "out = " << out[0][i] << endl;
   }
 #endif
 #if 0
   ppf.getImpulseResponse(0, response);
 
   for(int i=0; i<taps; i++) {
-    cerr << response[i].real() << endl;
+    cout << response[i].real() << endl;
   }
 #endif
 
@@ -84,7 +84,7 @@ int main (int argc, char *argv[])
   ppf.getFrequencyResponse(0, response);
 
   for(int i=0; i<taps; i+=2) {
-    cerr << response[i].real() << endl;
+    cout << response[i].real() << endl;
   }
 #endif
 }

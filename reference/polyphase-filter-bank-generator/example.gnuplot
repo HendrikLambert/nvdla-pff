@@ -107,7 +107,7 @@ set xlabel "filter tap"
 set xlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set x2label "" 
 set x2label  offset character 0, 0, 0 font "" textcolor lt -1 norotate
-set xrange [ 0 : 511 ] noreverse nowriteback
+set xrange [ 0 : 16 ] noreverse nowriteback
 set x2range [ * : * ] noreverse nowriteback
 set ylabel "" 
 set ylabel  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
@@ -126,7 +126,7 @@ set lmargin  -1
 set bmargin  -1
 set rmargin  -1
 set tmargin  -1
-set locale "nl_NL.UTF-8"
+#set locale "nl_NL.UTF-8"
 set pm3d explicit at s
 set pm3d scansautomatic
 set pm3d interpolate 1,1 flush begin noftriangles nohidden3d corners2color mean
